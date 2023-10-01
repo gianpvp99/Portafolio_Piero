@@ -19,6 +19,7 @@ export class HeaderComponent {
 
   toggleMenu(){
     this.sidebarOpen = !this.sidebarOpen;
+    console.log(this.sidebarOpen);
   }
 
   onClickedOutside(e: Event) {

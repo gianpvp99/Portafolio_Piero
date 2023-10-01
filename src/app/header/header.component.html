@@ -4,40 +4,42 @@
         <!-- Brand -->
         <div class="logo">
             <a class="navbar-brand" href="javascript:">
-                <img class="logo-light" title="" alt="" src="assets/img/logo-light.svg">
+                <img class="logo-light" title="" alt="" src="../../assets/img/G-PIERO.png" [height]="37" [width]="200">
             </a>
         </div>
         <!-- / -->
         <ul class="main-menu">
             <li>
                 <a class="menu-item"  spyOn="home" activeClass="active"  href="#home" (click)="fullPageScroll('home')">
-                    Home
+                    Inicio
                 </a>
             </li>
             <li>
                 <a class="menu-item" spyOn="about" activeClass="active"  href="#about" (click)="fullPageScroll('about')"> 
-                    About Me
+                    Sobre mí
                 </a>
             </li>
             <li>
                 <a class="menu-item" spyOn="project" activeClass="active"  href="#project" (click)="fullPageScroll('project')">
-                    Projects
+                    Proyectos
                 </a>
             </li>
             <li>
                 <a class="menu-item"  spyOn="services" activeClass="active" href="#services" (click)="fullPageScroll('services')">
-                    Services
+                    Servicios
                 </a>
             </li>
             <li>
                 <a class="menu-item"  spyOn="contactus" activeClass="active"  href="#contactus" (click)="fullPageScroll('contactus')">
-                    Contact
+                    Contacto
                 </a>
             </li>
         </ul>
         <!-- Top Menu -->
         <div class="d-flex" (clickOutside)="onClickedOutside($event)">
-            <a class="px-btn d-none d-lg-inline-flex" href="javascript:">Lets' Talk</a>
+            <a class="px-btn d-none d-lg-inline-flex" href="#contactus" (click)="fullPageScroll('contactus')">
+                Contáctame
+            </a>
             <button class="toggler-menu d-lg-none" [ngClass]="{'open': sidebarOpen}" (click)="toggleMenu()">
                 <span></span>
             </button>

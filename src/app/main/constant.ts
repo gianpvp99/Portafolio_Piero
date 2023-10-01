@@ -78,7 +78,7 @@ export const customOptionsSingle= {
 };
 
 export const typeoptions = {
-    strings: ['Desarrollador web full stack', 'Developer'],
+    strings: ['Desarrollador web full stack', 'Analista de sistemas','Marketero Digital'],
     typeSpeed: 100,
     backSpeed: 100,
     showCursor: true,
