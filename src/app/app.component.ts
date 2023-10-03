@@ -21,6 +21,15 @@ export class AppComponent implements OnInit, AfterViewInit{
 
   ngAfterViewInit() {
     this.spyService.spy({ thresholdBottom: 50 });
+    setTimeout(() => {
+    const preloader = document.querySelector('.preloader');
+    // const loader = document.querySelector('.loader');
+      if(preloader){
+        preloader.classList.add('preloader-deactivate');
+        // console.log('preloader',preloader)
+      }
+    },1000);
+
   }
 
   ngOnDestroy() {

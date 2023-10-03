@@ -28,6 +28,10 @@ export const options = {
 export const options2 = {
     loop: true,
     mouseDrag: true,
+    autoplay:true,
+    items: 1,
+    autoplayTimeout: 3000,
+    autoplayHoverPause: true,
     touchDrag: true,
     pullDrag: true,
     dots: false,

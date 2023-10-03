@@ -27,14 +27,14 @@
 ---------------------------*/
 #return-to-top {
     position: fixed;
-    bottom: 25px;
+    bottom: 115px;
     right: 25px;
     display: block;
     display: none;
     z-index: 9;
     i{
-        color: var(--px-theme);
-        font-size: 40px;
+        color: #1F2044;
+        font-size: 25px;
     }
 }
 
