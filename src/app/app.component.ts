@@ -3,6 +3,7 @@ import { fromEvent, Subscription } from 'rxjs';
 
 import { throttleTime} from 'rxjs/operators';
 import { ScrollSpyService } from 'ng-spy';
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -11,6 +12,7 @@ import { ScrollSpyService } from 'ng-spy';
 export class AppComponent implements OnInit, AfterViewInit{
   public fixedHeader: boolean = false;
   private windowScroll$: Subscription = Subscription.EMPTY;
+  
   constructor(private spyService: ScrollSpyService){}
   
   ngOnInit() {
