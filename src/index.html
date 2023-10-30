@@ -11,9 +11,19 @@
   <meta name="description" content="Portafolio - Gian Piero">
   <!-- <link rel="icon" type="image/x-icon" href="favicon.ico"> -->
   <link rel="shortcut Icon" href="./assets/img/logo_g.png" type="images/png">
-
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<!--  -->
   <!-- Agrega estilos CSS para el loader -->
   <style>
+
+    .particles-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1; /* Esto lo coloca detrás del contenido */
+    }
    /* START PRELOADER DESIGN */
     .preloader {
       position: fixed;
@@ -180,6 +190,7 @@
   </style>
 </head>
 <body>
+  <div id="particles-js" class="particles-container"></div>
   <!-- Muestra el loader al recargar la página -->
   <div class="preloader " >
     <div class="loader">
@@ -191,5 +202,8 @@
 </div>
 
   <app-root></app-root>
+  <script src="assets/js/particles.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
 </body>
 </html>

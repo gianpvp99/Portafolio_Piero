@@ -1,6 +1,6 @@
-<div class="container">
+<div class="container" data-aos="fade-up" data-aos-duration="3000">
     <div class="contactus-box rounded oveflow-hidden gray-bg">
-        <div class="row g-0 p-4 p-lg-5">
+        <div class="row g-0 p-4 p-lg-5" data-aos="fade-left"  data-aos-offset="300" data-aos-duration="500">
             <div class="col-lg-4"></div>
             <div class="col-lg-8">
                 <div class="contactus-title">
@@ -12,43 +12,50 @@
         <div class="row g-0 contactus-form p-4 p-lg-5 flex-row-reverse">
             <div class="col-lg-8">
                 <div class="contact-form">
-                    <form id="contact-form" method="POST">
+                    <form [formGroup]="contactForm" data-aos="fade-up" data-aos-offset="300" (ngSubmit)="register()">
                         <div class="row gx-3 gy-4">
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label class="form-label">Nombres y Apellidos</label>
-                                    <input name="Name" id="name" placeholder="Ingrese sus nombres y apellidos *" class="form-control" type="text">
+                                    <input formControlName="fullname"
+                                    name="Name" id="name" placeholder="Ingrese sus nombres y apellidos *" class="form-control" type="text">
+                                    <div *ngIf="showErrors && contactForm.get('fullname')?.hasError('required')">
+                                        Nombre es requerido.
+                                      </div>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label class="form-label">Correo</label>
-                                    <input name="Email" id="email" placeholder="Ingrese su correo *" class="form-control" type="email">
+                                    <input formControlName="email" 
+                                    name="Email" id="email" placeholder="Ingrese su correo *" class="form-control" type="email">
                                 </div>
                             </div>
                             <div class="col-12">
                                 <div class="form-group">
                                     <label class="form-label">Teléfono</label>
-                                    <input name="Subject" id="telf" placeholder="Ingrese su teléfono *" class="form-control" type="text">
+                                    <input formControlName="phone" 
+                                    name="Subject" id="telf" placeholder="Ingrese su teléfono *" class="form-control" type="text">
                                 </div>
                             </div>
                             <div class="col-md-12">
                                 <div class="form-group">
                                     <label class="form-label">Mensaje</label>
-                                    <textarea name="message" id="message" placeholder="Ingrese su mensaje *" rows="4" class="form-control"></textarea>
+                                    <textarea formControlName="message"
+                                    name="message" id="message" placeholder="Ingrese su mensaje *" rows="4" class="form-control"></textarea>
                                 </div>
                             </div>
                             <div class="col-md-12">
                                 <div class="send">
-                                    <button class="px-btn w-100" type="button" value="Send"> Enviar mensaje</button>
+                                    <button class="px-btn w-100" type="submit" value="Send"> Enviar mensaje</button>
                                 </div>
                             </div>
                         </div>
                     </form>
                 </div>
             </div>
-            <div class="col-lg-4 pe-md-5">
-                <div class="contact-banner d-none d-lg-block">
+            <div class="col-lg-4 pe-md-5" data-aos="fade-up" data-aos-duration="3000">
+                <div class="contact-banner d-none d-lg-block" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
                     <img src="assets/img/contact-us.png" title="" alt="">
                 </div>
                 <div class="contact-info">

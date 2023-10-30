@@ -16,6 +16,9 @@ import { ContactComponent } from './main/contact/contact.component';
 import {NgClickOutsideDirective} from 'ng-click-outside2';
 import { ScrollSpyModule } from 'ng-spy';
 import { BrandsComponent } from './main/brands/brands.component';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -37,7 +40,11 @@ import { BrandsComponent } from './main/brands/brands.component';
     BrowserAnimationsModule,
     CarouselModule,
     ScrollSpyModule,
-    NgClickOutsideDirective
+    NgClickOutsideDirective,
+    HttpClientModule,
+    FormsModule,
+    CommonModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

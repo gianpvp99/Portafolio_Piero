@@ -27,13 +27,14 @@ a {
     .effect-4 {
         position: absolute;
         top: 0;
-        bottom: 0;
+        bottom: -50;
         margin: auto;
         right: 0;
         height: 450px;
         img {
             height: 100%;
         }
+        z-index: -1;
     }
 }
 
