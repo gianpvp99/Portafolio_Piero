@@ -14,33 +14,39 @@ export class BrandsComponent {
     this.slidesStore = [
       {
         id : 1,
-        src: "assets/img/brand-1.svg",
-        alt: "brand-1",
-        title: "brand-1",
+        src: "assets/img/angular_brand.png",
+        alt: "angular",
+        title: "angular",
       },
       {
         id : 2,
-        src: "assets/img/brand-2.svg",
-        alt: "brand-2",
-        title: "brand-2",
+        src: "assets/img/php_brand.png",
+        alt: "php",
+        title: "php",
       },
       {
         id : 3,
-        src: "assets/img/brand-1.svg",
-        alt: "brand-3",
-        title: "brand-3",
+        src: "assets/img/laravel_brand.png",
+        alt: "laravel",
+        title: "laravel",
       },
       {
         id : 4,
-        src: "assets/img/brand-2.svg",
-        alt: "brand-4",
-        title: "brand-4",
+        src: "assets/img/sql_brand.jpg",
+        alt: "sql",
+        title: "sql",
       },
       {
         id : 5,
-        src: "assets/img/brand-1.svg",
-        alt: "brand-1",
-        title: "brand-1",
+        src: "assets/img/mysql_brand.png",
+        alt: "mysql",
+        title: "mysql",
+      },
+      {
+        id : 6,
+        src: "assets/img/reactjs_brand.png",
+        alt: "reactjs",
+        title: "reactjs",
       }
     ];
   }

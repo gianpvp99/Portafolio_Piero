@@ -19,6 +19,7 @@ import { BrandsComponent } from './main/brands/brands.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
 
 @NgModule({
   declarations: [
@@ -44,8 +45,8 @@ import { CommonModule } from '@angular/common';
     HttpClientModule,
     FormsModule,
     CommonModule,
-    ReactiveFormsModule
-  ],
+    ReactiveFormsModule,
+    SweetAlert2Module.forRoot()  ],
   providers: [],
   bootstrap: [AppComponent]
 })

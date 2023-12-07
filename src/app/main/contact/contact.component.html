@@ -18,31 +18,43 @@
                                 <div class="form-group">
                                     <label class="form-label">Nombres y Apellidos</label>
                                     <input formControlName="fullname"
-                                    name="Name" id="name" placeholder="Ingrese sus nombres y apellidos *" class="form-control" type="text">
+                                    name="Name" id="name" placeholder="Ingrese sus nombres y apellidos *" class="form-control" type="text" maxlength="30">
                                     <div *ngIf="showErrors && contactForm.get('fullname')?.hasError('required')">
-                                        Nombre es requerido.
-                                      </div>
+                                        <span class="span3">* Nombre es requerido</span>
+                                    </div>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label class="form-label">Correo</label>
                                     <input formControlName="email" 
-                                    name="Email" id="email" placeholder="Ingrese su correo *" class="form-control" type="email">
+                                    name="Email" id="email" placeholder="Ingrese su correo *" class="form-control" type="email" maxlength="60">
+                                    <div *ngIf="showErrors && contactForm.get('email')?.hasError('required')">
+                                        <span class="span3">* Correo es requerido</span>
+                                    </div>
+                                    <div *ngIf="showErrors && contactForm.get('email')?.hasError('email')">
+                                        <span class="span3">* El correo es inválido, eje: email@gmail.com</span>
+                                    </div>
                                 </div>
                             </div>
                             <div class="col-12">
                                 <div class="form-group">
                                     <label class="form-label">Teléfono</label>
                                     <input formControlName="phone" 
-                                    name="Subject" id="telf" placeholder="Ingrese su teléfono *" class="form-control" type="text">
+                                    name="Subject" id="telf" placeholder="Ingrese su teléfono *" class="form-control" type="text" maxlength="15">
+                                    <div *ngIf="showErrors && contactForm.get('phone')?.hasError('required')">
+                                        <span class="span3">* Teléfono es requerido</span>
+                                    </div>
                                 </div>
                             </div>
                             <div class="col-md-12">
                                 <div class="form-group">
                                     <label class="form-label">Mensaje</label>
                                     <textarea formControlName="message"
-                                    name="message" id="message" placeholder="Ingrese su mensaje *" rows="4" class="form-control"></textarea>
+                                    name="message" id="message" placeholder="Ingrese su mensaje *" rows="4" class="form-control" maxlength="300"></textarea>
+                                    <div *ngIf="showErrors && contactForm.get('message')?.hasError('required')">
+                                        <span class="span3">* Mensaje es requerido</span>
+                                    </div>
                                 </div>
                             </div>
                             <div class="col-md-12">
