@@ -20,6 +20,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 @NgModule({
   declarations: [
@@ -46,6 +47,7 @@ import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
     FormsModule,
     CommonModule,
     ReactiveFormsModule,
+    MatProgressSpinnerModule,
     SweetAlert2Module.forRoot()  ],
   providers: [],
   bootstrap: [AppComponent]
