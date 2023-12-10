@@ -5,7 +5,7 @@ import { HeaderComponent } from './header/header.component';
 import { MainComponent } from './main/main.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CarouselModule } from 'ngx-owl-carousel-o';
-import { RouterModule } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './main/home/home.component';
 import { AboutComponent } from './main/about/about.component';
 import { ExperienceComponent } from './main/experience/experience.component';
@@ -22,6 +22,11 @@ import { CommonModule } from '@angular/common';
 import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { CertificatesComponent } from './main/certificates/certificates.component';
+
+const routes: Routes = [
+  { path: '', component: AppComponent, pathMatch:'full' }, // Ruta para la página de inicio
+  { path: '**', component:AppComponent}
+];
 
 @NgModule({
   declarations: [
@@ -40,7 +45,7 @@ import { CertificatesComponent } from './main/certificates/certificates.componen
   ],
   imports: [
     BrowserModule,
-    RouterModule,
+    RouterModule.forRoot(routes),
     BrowserAnimationsModule,
     CarouselModule,
     ScrollSpyModule,
