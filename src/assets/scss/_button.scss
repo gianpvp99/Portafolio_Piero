@@ -49,6 +49,11 @@
 			color: var(--px-white);
 		}
 	}
+	&[disabled]{
+		color:black;
+		opacity: 0.4;
+		cursor: not-allowed;
+	}
 }
 
 

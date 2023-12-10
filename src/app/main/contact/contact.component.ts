@@ -14,7 +14,7 @@ export class ContactComponent implements OnInit {
 
   public contactForm: FormGroup;
   public showErrors:boolean = false;
-
+  public preloader:boolean = false;
   constructor(
     private fb:FormBuilder,
     private contact:ContactService,
@@ -28,45 +28,21 @@ export class ContactComponent implements OnInit {
     });
   }
   ngOnInit(): void {
-    const preloader = document.querySelector('.preloader');
-
-    console.log(preloader)
+    
   }
-
-  preloaderDesactivate(){
-    setTimeout(() => {
-      const preloader = document.querySelector('.preloader');
-      // const loader = document.querySelector('.loader');
-        if(preloader){
-          preloader.classList.add('preloader-deactivate');
-          // console.log('preloader',preloader)
-        }
-      },1000);
-  }
-
-  preloaderActivate(){
-    setTimeout(() => {
-      const preloader = document.querySelector('.preloader');
-        if(preloader){
-          this.renderer.removeClass(preloader, 'preloader-deactivate');          
-          // console.log('preloader',preloader)
-        }
-      },1000);
-  }
-
   
   register(){
+    
     this.showErrors = true;
     if(this.contactForm.invalid){
       return;
     } 
+
+    this.preloader = true;
     
-    this.preloaderActivate();
     this.contact.registerContact(this.contactForm.value).subscribe(
       (res:any) => {
         
-        this.preloaderDesactivate();
-
         if(res.state == 0){
           Swal.fire(
             'Advertencia',
@@ -78,11 +54,12 @@ export class ContactComponent implements OnInit {
             'Registrado correctamente :)',
             'Nos comunicaremos con usted a través de su gmail en el transcurso del día!',
             'success'
-          )
+          );
         }
+
+        this.preloader = false;
       }, (error:any) => {
 
-          this.preloaderDesactivate();
           const Toast = Swal.mixin({
             toast: true,
             position: "top-end",
@@ -98,6 +75,8 @@ export class ContactComponent implements OnInit {
             icon: "warning",
             title: "Hubo un error interno en el servidor, intente en otro momento"
           });
+
+          this.preloader = false;
       })
   }
 }

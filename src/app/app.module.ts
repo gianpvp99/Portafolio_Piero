@@ -21,6 +21,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { CertificatesComponent } from './main/certificates/certificates.component';
 
 @NgModule({
   declarations: [
@@ -33,8 +34,9 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
     ServicesComponent,
     WorkComponent,
     TestimonialsComponent,
+    CertificatesComponent,
     ContactComponent,
-    BrandsComponent
+    BrandsComponent,
   ],
   imports: [
     BrowserModule,
