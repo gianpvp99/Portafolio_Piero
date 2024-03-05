@@ -47,6 +47,12 @@ export class BrandsComponent {
         src: "assets/img/reactjs_brand.png",
         alt: "reactjs",
         title: "reactjs",
+      },
+      {
+        id : 7,
+        src: "assets/img/netcore.png",
+        alt: "netcore",
+        title: "netcore",
       }
     ];
   }
